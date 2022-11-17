@@ -20,6 +20,9 @@ class Main extends Component{
             
         })
         }
+        editPost (){
+         window.contract.editPost({ postId: window.contract.getPostById })
+      }
         constructor(props){
             super(props)
             this.state ={
@@ -74,6 +77,7 @@ class Main extends Component{
                           <h5 className="card-title">{post.title}</h5>
                             <p className="text-justify card-text"> {post.body}</p>
                           </li>
+                          <button onClick={editPost}>Edit</button>
                          
                         </ul>
                       </div>

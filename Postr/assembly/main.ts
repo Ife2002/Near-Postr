@@ -78,3 +78,8 @@ export function getPostById(id: string): Post | null{
   }
 }
 
+
+export function editPost(id: string, _post: string): void {
+  const post = getPostById(id);
+  if (post) post.body = _post;
+}
